@@ -1,0 +1,35 @@
+svg.cow-bull {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  fill: var(--text-color);
+}
+svg .cow {
+  animation: hideshow 4s ease-in-out infinite;
+}
+svg .bull {
+  animation: showhide 4s ease-in-out infinite;
+}
+
+@keyframes hideshow {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showhide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
