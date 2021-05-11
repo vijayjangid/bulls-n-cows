@@ -6,7 +6,7 @@
 <img width="860" alt="Screenshot 2021-05-11 at 9 39 32 AM" src="https://user-images.githubusercontent.com/11829883/117757004-da965800-b23c-11eb-9911-d53b2b972c20.png">
 
 originally forked from [vetrivelcsamy's repo](https://github.com/vetrivelcsamy/reactjs-hangman "vetrivelcsamy")
-Logo made by [smalllikeart](https://www.flaticon.com/authors/smalllikeart "smalllikeart")
+Logo made by [freepik/flaticon](https://www.freepik.com "Flaticon")
 
 ### Features
 
