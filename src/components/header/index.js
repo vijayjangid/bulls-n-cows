@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import useWordSource from "../../hooks/use-word-source-hook";
+import Logo from "../logo";
 import ThemeToggle from "../theme-toggle";
 import "./style.css";
 
@@ -16,10 +17,11 @@ export default function Header() {
     <header className="header">
       <nav>
         <a href="/" className="logo neumorph">
-          <img src="images/logo.svg" alt="Hangman logo" />
-          <div>
-            <h1>Hangman</h1>
-            <small>for programmers</small>
+          <Logo />
+          <div className="logo-text">
+            <h1>Bulls</h1>
+            <small>n</small>
+            <h1>Cows</h1>
           </div>
         </a>
         <ul>

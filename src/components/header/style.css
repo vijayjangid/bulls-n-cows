@@ -7,17 +7,26 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .header nav .logo {
   text-decoration: none !important;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   padding: 0.5rem;
 }
-.header nav .logo img {
-  height: 48px;
-  object-fit: contain;
+
+.header .logo-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 5rem;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
 }
+
+/* .header nav .logo img:nth-child(1) {
+  animation: hideshow 1s ease-in-out infinite;
+} */
 .header nav ul {
   list-style-type: none;
   display: flex;
@@ -32,8 +41,3 @@
   margin-right: 1rem;
   font-weight: bold;
 }
-/* 
-.header select,
-.header option {
-  text-transform: uppercase;
-} */

@@ -32,7 +32,6 @@ export default function Hangman() {
 
   const handleGuess = useCallback(
     (letter) => {
-      console.log("letter", letter);
       // do not update when game is lost/won
       if (result !== GAME_RESULT.IN_PROGRESS) {
         return;
