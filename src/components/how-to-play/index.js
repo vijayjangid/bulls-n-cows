@@ -11,7 +11,7 @@ export default function HowToPlay() {
   }, [setShowRules]);
 
   return (
-    <span className="rules-toggle neumorph" onClick={toggleRules}>
+    <span className="button rules-toggle neumorph" onClick={toggleRules}>
       {showRules ? <CrossIcon /> : <InfoIcon />}
       {showRules && <Rules />}
     </span>

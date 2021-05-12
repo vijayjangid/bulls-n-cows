@@ -1,8 +1,9 @@
 import { useCallback } from "react";
-import { useSecretSize } from "../../hooks";
+import { useSecretSize, useGameStats } from "../../hooks";
 import HowToPlay from "../how-to-play";
 import Logo from "../logo";
 import ThemeToggle from "../theme-toggle";
+import GameStats from "../game-stats";
 import "./style.css";
 
 function generateOptions(start = 3, end = 5) {
@@ -46,6 +47,11 @@ export default function Header() {
           <li>
             <span role="button" className="neumorph">
               <HowToPlay />
+            </span>
+          </li>
+          <li>
+            <span role="button" className="neumorph">
+              <GameStats />
             </span>
           </li>
           <li>

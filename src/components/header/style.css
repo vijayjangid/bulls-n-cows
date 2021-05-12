@@ -45,3 +45,8 @@
   margin-right: 1rem;
   font-weight: bold;
 }
+
+.header nav ul li .button {
+  min-width: 1.3rem;
+  font-size: 1.3rem;
+}

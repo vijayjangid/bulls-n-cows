@@ -13,7 +13,7 @@ export default function ThemeToggle() {
 
   const themeSymbol = darkMode ? <Sun /> : <Moon />;
   return (
-    <span className="theme-toggle neumorph" onClick={onToggle}>
+    <span className="button theme-toggle neumorph" onClick={onToggle}>
       {themeSymbol}
     </span>
   );
