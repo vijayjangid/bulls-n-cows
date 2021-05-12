@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useReducer } from "react";
 import { Guess, Keyboard, HintsBoard } from "../components";
-import { useSecret } from "../hooks";
+import { useGameStats, useSecret } from "../hooks";
 import { GAME_RESULT } from "../constants";
 import "./style.css";
 import Result from "../components/result";
@@ -61,6 +61,7 @@ function reset() {
   return { type: ACTIONS.RESET };
 }
 export default function GameArea() {
+  const { addScore } = useGameStats();
   const { secret, resetSecret } = useSecret();
   const [{ guess, hints, result }, dispatch] = useReducer(
     stateReducer,
@@ -73,8 +74,9 @@ export default function GameArea() {
   useEffect(() => {
     if (secret === guess.join("")) {
       dispatch(setResult(GAME_RESULT.WON));
+      addScore(hints.length);
     }
-  }, [guess, secret]);
+  }, [guess, secret, addScore, hints]);
 
   const handleReset = useCallback(() => {
     if (result === GAME_RESULT.WON) {
@@ -104,6 +106,7 @@ export default function GameArea() {
   const disabledKeys = result === GAME_RESULT.WON ? "0123456789".split("") : [];
   return (
     <div className="game-area">
+      {secret}
       <Result result={result} score={hints.length} />
       <Guess guess={guess} size={secret.length} />
       <div className="board-wrapper">
