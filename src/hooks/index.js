@@ -1,4 +1,5 @@
 import { default as useDarkMode } from "./use-theme-hook";
-import { default as useWordsource } from "./use-word-source-hook";
+import { default as useSecret } from "./use-secret";
+import { default as useSecretSize } from "./use-secret-size";
 
-export { useDarkMode, useWordsource };
+export { useDarkMode, useSecret, useSecretSize };

@@ -2,6 +2,7 @@
 /*another neumorphics design https://codepen.io/ryanparag/pen/OJVJrxZ */
 
 :root {
+  --border-color: #c5d6ec;
   --error-color: #f94144;
   --success-color: #2a9d8f;
   --text-color: #879fbe;
@@ -34,6 +35,7 @@
 
 /* dark theme */
 .dark {
+  --border-color: #333943;
   --text-color: #b4bfce;
   /* --link-active-color: #e95c7c; */
   --gradient-start-color: #bd4a8e;
@@ -80,7 +82,6 @@ select {
   padding: 0.8rem;
   color: var(--text-color);
   font-weight: bold;
-  width: 13rem;
   outline: 0;
 }
 

@@ -1,21 +1,21 @@
 import { Footer, Header } from "./components";
 import { useDarkMode } from "./hooks";
-import Hangman from "./containers/hangman";
-import { WordsourceContextProvider } from "./state/wordsource-context";
+import GameArea from "./containers/game-area";
+import { SecretContextProvider } from "./state/secret-context";
 
 function App() {
   const { darkMode } = useDarkMode();
   const themeClass = darkMode ? "dark app" : "app";
   return (
-    <WordsourceContextProvider>
+    <SecretContextProvider>
       <div className={themeClass}>
         <div className="container">
           <Header />
-          <Hangman />
+          <GameArea />
           <Footer />
         </div>
       </div>
-    </WordsourceContextProvider>
+    </SecretContextProvider>
   );
 }
 

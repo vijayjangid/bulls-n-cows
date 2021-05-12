@@ -1,6 +1,11 @@
-.hangman {
+.game-area {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.game-area .board-wrapper {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
 }

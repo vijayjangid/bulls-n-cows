@@ -1,0 +1,52 @@
+.hintsboard {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 10rem;
+}
+.hintsboard .header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px dotted var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2rem;
+}
+.hintsboard .header h2 {
+  margin-bottom: 1rem;
+}
+.hintsboard .header .abbr {
+  display: flex;
+  flex-direction: column;
+}
+.hintsboard .body {
+  display: flex;
+  flex-direction: column;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.hintsboard .body .hint-list {
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+}
+.hintsboard .body .hint-list li {
+  border-bottom: dashed 1px var(--border-color);
+}
+.hintsboard .body .hint-list span {
+  padding: 0.3rem;
+}
+.hintsboard .body .hint-list .srn {
+  border-right: dashed 1px var(--border-color);
+  text-align: right;
+  display: inline-block;
+  width: 20px;
+  color: var(--link-active-color);
+}
+.hintsboard .body .hint-list .hint {
+  letter-spacing: 0.2rem;
+  width: 100%;
+}
