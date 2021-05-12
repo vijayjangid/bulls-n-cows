@@ -36,7 +36,6 @@ function stateReducer(state, action) {
   const { type, payload } = action;
   switch (type) {
     case ACTIONS.RESET:
-      console.log("resetting");
       return initialState;
     case ACTIONS.SET_GUESS:
       return { ...state, guess: payload };
@@ -67,7 +66,6 @@ export default function GameArea() {
     stateReducer,
     initialState
   );
-  console.log(guess);
   useEffect(() => {
     dispatch(reset());
   }, [secret]);
@@ -103,11 +101,9 @@ export default function GameArea() {
     },
     [result, guess, secret, hints]
   );
-  console.log("hints", hints);
   const disabledKeys = result === GAME_RESULT.WON ? "0123456789".split("") : [];
   return (
     <div className="game-area">
-      {secret}
       <Result result={result} score={hints.length} />
       <Guess guess={guess} size={secret.length} />
       <div className="board-wrapper">
