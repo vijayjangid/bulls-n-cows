@@ -93,7 +93,7 @@ export default function GameArea() {
       let guessIncludingCurrentLetter = [...guess, letter];
       if (guessIncludingCurrentLetter.length === secret.length) {
         const hint = prepareHint(guessIncludingCurrentLetter, secret);
-        dispatch(setHints([hint, ...hints]));
+        dispatch(setHints(hint));
       }
       guessIncludingCurrentLetter.length > secret.length
         ? dispatch(setGuess(guessIncludingCurrentLetter.slice(secret.length)))
