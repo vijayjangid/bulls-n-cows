@@ -67,7 +67,7 @@ export default function GameArea() {
   const disabledKeys = result === GAME_RESULT.WON ? "0123456789".split("") : [];
   return (
     <div className="game-area">
-      {secret}
+      <Result result={result} score={hints.length} />
       <Guess guess={guess} size={secret.length} />
       <div className="board-wrapper">
         <HintsBoard hints={hints} />
@@ -77,7 +77,6 @@ export default function GameArea() {
           onKeyClick={handleGuess}
         />
       </div>
-      <Result result={result} score={hints.length} />
     </div>
   );
 }

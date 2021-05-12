@@ -23,7 +23,7 @@
 .hintsboard .body {
   display: flex;
   flex-direction: column;
-  max-height: 50vh;
+  max-height: 35vh;
   overflow-y: auto;
 }
 .hintsboard .body .hint-list {

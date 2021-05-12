@@ -6,7 +6,7 @@ export default function Result({ result, score }) {
   if (result === GAME_RESULT.WON) {
     resultClass = "success";
   } else {
-    return null;
+    return <div className="result"></div>;
   }
 
   return (
