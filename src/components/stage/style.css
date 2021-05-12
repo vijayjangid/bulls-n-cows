@@ -3,10 +3,11 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  font-size: 1rem;
 }
 .stage label {
   font-weight: bold;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.2rem;
 }
 .stage svg {
   fill: none;

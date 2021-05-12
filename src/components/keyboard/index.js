@@ -2,8 +2,8 @@ import { memo, useCallback, useEffect } from "react";
 import KeyboardButton from "../keyboard-button";
 import "./style.css";
 
-const keys = "abcdefghijklmnopqrstuvwxyz".split("");
-const Keyboard = memo(({ onKeyClick, onReset, disabledKeys }) => {
+const keys = "1234567890".split("");
+const Keyboard = memo(({ onKeyClick, onReset, disabledKeys = [] }) => {
   const handleKeyOnClick = useCallback(
     (event) => {
       onKeyClick(event.target.value);
@@ -21,15 +21,17 @@ const Keyboard = memo(({ onKeyClick, onReset, disabledKeys }) => {
        * 32 = space
        *
        * NORMAL
-       * 65 = A (Capital)
-       * 90 = Z (Capital)
-       * 97 = a (Small)
-       * 122 = z (Small)
+       * 48 = 0 (Capital)
+       * 57 = 9 (Small)
        */
       const code = event.keyCode || event.which;
+      if (event.shiftKey || event.altKey || event.ctrlKey) {
+        return;
+      }
+
       if (code === 8 || code === 13 || code === 32) {
         onReset();
-      } else if ((code >= 65 && code <= 90) || (code >= 97 && code <= 122)) {
+      } else if (code >= 48 && code <= 57) {
         onKeyClick(event.key);
       }
     },
@@ -43,16 +45,14 @@ const Keyboard = memo(({ onKeyClick, onReset, disabledKeys }) => {
 
   return (
     <div className="keyboard">
-      <div className="letters">
-        {keys.map((key) => (
-          <KeyboardButton
-            key={key}
-            value={key}
-            disabled={disabledKeys.includes(key)}
-            onClick={handleKeyOnClick}
-          />
-        ))}
-      </div>
+      {keys.map((key) => (
+        <KeyboardButton
+          key={key}
+          value={key}
+          disabled={disabledKeys.includes(key)}
+          onClick={handleKeyOnClick}
+        />
+      ))}
       <KeyboardButton value="reset" text="Reset" onClick={onReset} />
     </div>
   );

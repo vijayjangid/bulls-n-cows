@@ -1,16 +1,24 @@
-# ![bull](https://user-images.githubusercontent.com/11829883/117833395-efeaa100-b293-11eb-8949-f1d867efc926.png) ![cow](https://user-images.githubusercontent.com/11829883/117833426-f547eb80-b293-11eb-9b24-669e0cb9465d.png) Bulls `n` Cows
+# ![hangman-game](https://user-images.githubusercontent.com/11829883/117690634-b012b380-b1d8-11eb-8db1-268afd1e6dee.png) Bulls `n` Cows
 
 #### Using ReactJS (hooks and context api), CSS3, SVG and neumorphic design
 
+ <img width="860" alt="Screenshot 2021-05-11 at 9 39 47 AM" src="https://user-images.githubusercontent.com/11829883/117757013-dec27580-b23c-11eb-96e0-ea29b9e89a97.png">
+<img width="860" alt="Screenshot 2021-05-11 at 9 39 32 AM" src="https://user-images.githubusercontent.com/11829883/117757004-da965800-b23c-11eb-9911-d53b2b972c20.png">
+
+originally forked from [vetrivelcsamy's repo](https://github.com/vetrivelcsamy/reactjs-hangman "vetrivelcsamy")
 Logo made by [freepik/flaticon](https://www.freepik.com "Flaticon")
 
 ### Features
 
 - Dark/Light mode
-- Select #digits (3 to 10)
+- Two Words source
+
+  - Programming Language
+  - Database
+
 - Keyboard support
 - Neumorphic design (experimental)
-- Game stats
+- SVG manipulation for Hangman graphic
 
 ### Folder structure
 

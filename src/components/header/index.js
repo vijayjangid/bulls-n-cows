@@ -1,16 +1,21 @@
 import { useCallback } from "react";
-import useWordSource from "../../hooks/use-word-source-hook";
+import { useSecretSize } from "../../hooks";
+import HowToPlay from "../how-to-play";
 import Logo from "../logo";
 import ThemeToggle from "../theme-toggle";
 import "./style.css";
 
+function generateOptions(start = 3, end = 5) {
+  const arr = new Array(end - start + 1).fill(start);
+  return arr.map((num, idx) => <option key={idx + num}>{idx + num}</option>);
+}
 export default function Header() {
-  const { wordsource, wordsources, setWordsource } = useWordSource();
+  const { secretSize, setSecretSize } = useSecretSize();
   const handleWordsourceChange = useCallback(
     (e) => {
-      setWordsource(e.target.value);
+      setSecretSize(Number(e.target.value));
     },
-    [setWordsource]
+    [setSecretSize]
   );
 
   return (
@@ -20,25 +25,28 @@ export default function Header() {
           <Logo />
           <div className="logo-text">
             <h1>Bulls</h1>
-            <small>n</small>
+            <strong className="n">n</strong>
             <h1>Cows</h1>
           </div>
         </a>
         <ul>
           <li>
-            <label htmlFor="wordsource">Word source:</label>
+            <label htmlFor="numbersize">#digits:</label>
             <select
-              id="wordsource"
+              id="numbersize"
               className="neumorph"
               type="text"
-              placeholder="Choose a word source"
-              value={wordsource}
+              placeholder="Choose #digits"
+              value={secretSize}
               onChange={handleWordsourceChange}
             >
-              {wordsources.map((source) => (
-                <option key={source}>{source}</option>
-              ))}
+              {generateOptions()}
             </select>
+          </li>
+          <li>
+            <span role="button" className="neumorph">
+              <HowToPlay />
+            </span>
           </li>
           <li>
             <span role="button" className="neumorph">

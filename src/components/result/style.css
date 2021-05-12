@@ -2,6 +2,7 @@
   padding: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
+  margin: 2rem 0;
 }
 .result.error {
   color: var(--error-color) !important;
