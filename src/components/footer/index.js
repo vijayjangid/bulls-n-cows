@@ -15,10 +15,10 @@ export default function Footer() {
       <div>
         Logo made by
         <a
-          href="https://www.flaticon.com/authors/smalllikeart"
-          title="smalllikeart"
+          href="https://www.freepik.com"
+          title="freepik"
         >
-          smalllikeart
+          freepik
         </a>
         from
         <a href="https://www.flaticon.com/" title="Flaticon">
