@@ -1,9 +1,9 @@
-# ![hangman-game](https://user-images.githubusercontent.com/11829883/117690634-b012b380-b1d8-11eb-8db1-268afd1e6dee.png) Bulls `n` Cows
+# ![bull](https://user-images.githubusercontent.com/11829883/117929085-02a7b900-b31a-11eb-8354-62fe877897a2.png) Bulls `n` Cows ![cow](https://user-images.githubusercontent.com/11829883/117929095-04717c80-b31a-11eb-86a8-9d98747a176b.png)
 
 #### Using ReactJS (hooks and context api), CSS3, SVG and neumorphic design
 
- <img width="860" alt="Screenshot 2021-05-11 at 9 39 47 AM" src="https://user-images.githubusercontent.com/11829883/117757013-dec27580-b23c-11eb-96e0-ea29b9e89a97.png">
-<img width="860" alt="Screenshot 2021-05-11 at 9 39 32 AM" src="https://user-images.githubusercontent.com/11829883/117757004-da965800-b23c-11eb-9911-d53b2b972c20.png">
+<img width="1680" alt="dark" src="https://user-images.githubusercontent.com/11829883/117929673-b446ea00-b31a-11eb-8136-3eb6c26285c9.png">
+<img width="1680" alt="light" src="https://user-images.githubusercontent.com/11829883/117929676-b4df8080-b31a-11eb-8753-d88ce5151179.png">
 
 originally forked from [vetrivelcsamy's repo](https://github.com/vetrivelcsamy/reactjs-hangman "vetrivelcsamy")
 Logo made by [freepik/flaticon](https://www.freepik.com "Flaticon")
