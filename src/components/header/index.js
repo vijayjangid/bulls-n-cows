@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { useSecretSize, useGameStats } from "../../hooks";
+import { useSecretSize } from "../../hooks";
 import HowToPlay from "../how-to-play";
 import Logo from "../logo";
 import ThemeToggle from "../theme-toggle";

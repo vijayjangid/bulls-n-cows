@@ -99,7 +99,7 @@ export default function GameArea() {
         ? dispatch(setGuess(guessIncludingCurrentLetter.slice(secret.length)))
         : dispatch(setGuess(guessIncludingCurrentLetter));
     },
-    [result, guess, secret, hints]
+    [result, guess, secret]
   );
   const disabledKeys = result === GAME_RESULT.WON ? "0123456789".split("") : [];
   return (
