@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useReducer, useState } from "react";
+import { useCallback, useEffect, useReducer } from "react";
 import { Guess, Keyboard, HintsBoard } from "../components";
 import { useSecret } from "../hooks";
 import { GAME_RESULT } from "../constants";
