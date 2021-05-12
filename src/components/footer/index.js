@@ -5,10 +5,10 @@ export default function Footer() {
       <div>
         Github:{" "}
         <a
-          href="https://github.com/vijayjangid/react-hangman"
-          title="Github React-Hangman"
+          href="https://github.com/vijayjangid/bulls-n-cows"
+          title="Github bulls-n-cows"
         >
-          @vijayjangid/react-hangman
+          @vijayjangid/bulls-n-cows
         </a>
       </div>
       <div className="divider" />
