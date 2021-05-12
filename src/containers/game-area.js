@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Guess, Keyboard, HintsBoard } from "../components";
 import { useSecret } from "../hooks";
-import { MAX_WRONG_GUESSES, GAME_RESULT } from "../constants";
+import { GAME_RESULT } from "../constants";
 import "./style.css";
 import Result from "../components/result";
 
@@ -38,13 +38,13 @@ export default function GameArea() {
     } else if (guess.length > secret.length) {
       setGuess(guess.slice(secret.length));
     }
-  }, [guess]);
+  }, [guess, secret]);
 
   useEffect(() => {
     if (secret === guess.join("")) {
       setResult(GAME_RESULT.WON);
     }
-  }, [guess]);
+  }, [guess, secret]);
 
   const handleReset = useCallback(() => {
     if (result === GAME_RESULT.WON) {
@@ -52,7 +52,7 @@ export default function GameArea() {
     } else {
       setGuess([]);
     }
-  }, [result]);
+  }, [result, resetSecret]);
 
   const handleGuess = useCallback(
     (letter) => {

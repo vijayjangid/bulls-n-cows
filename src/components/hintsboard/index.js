@@ -1,16 +1,5 @@
 import Stage from "../stage";
 import "./style.css";
-const initialValue = [
-  "2B3C",
-  "4B0C",
-  "0B0C",
-  "2B3C",
-  "4B0C",
-  "0B0C",
-  "2B3C",
-  "4B0C",
-  "0B0C"
-];
 export default function HintsBoard({ hints = [] }) {
   return (
     <div className="hintsboard neumorph invert disabled">
